@@ -1,0 +1,62 @@
+{
+  "changes": [
+    {
+      "change_type": "table_added",
+      "table": "audit_logs"
+    },
+    {
+      "change_type": "table_removed",
+      "table": "products"
+    },
+    {
+      "change_type": "column_renamed",
+      "table": "customers",
+      "old_name": "full_name",
+      "new_name": "name"
+    },
+    {
+      "change_type": "column_removed",
+      "table": "customers",
+      "column": "phone"
+    },
+    {
+      "change_type": "column_modified",
+      "table": "customers",
+      "column": "email",
+      "property": "character_maximum_length",
+      "old_value": 150,
+      "new_value": 200
+    },
+    {
+      "change_type": "column_added",
+      "table": "customers",
+      "column": "is_active"
+    },
+    {
+      "change_type": "column_renamed",
+      "table": "orders",
+      "old_name": "order_total",
+      "new_name": "total_amount"
+    },
+    {
+      "change_type": "column_modified",
+      "table": "orders",
+      "column": "status",
+      "property": "character_maximum_length",
+      "old_value": 20,
+      "new_value": 30
+    },
+    {
+      "change_type": "column_added",
+      "table": "orders",
+      "column": "updated_at"
+    }
+  ],
+  "unchanged_checks": [
+    "customers.id",
+    "customers.created_at",
+    "orders.id",
+    "orders.customer_id",
+    "orders.created_at"
+  ]
+}

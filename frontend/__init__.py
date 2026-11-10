@@ -1,0 +1,2 @@
+"""SchemaShield Streamlit frontend package."""
+

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+baseline.json
+/SchemaShield_Step_by_Step_Build_Guide.md

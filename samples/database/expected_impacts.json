@@ -1,0 +1,67 @@
+{
+  "impacts": [
+    {
+      "database_object": "customers.full_name",
+      "change_type": "column_renamed",
+      "source_files": ["customer_repository.py", "report_queries.sql"],
+      "functions": ["get_customer_profile", "create_customer"],
+      "references": [
+        {"source_file": "customer_repository.py", "function_name": "get_customer_profile"},
+        {"source_file": "customer_repository.py", "function_name": "create_customer"},
+        {"source_file": "report_queries.sql", "function_name": null}
+      ]
+    },
+    {
+      "database_object": "customers.phone",
+      "change_type": "column_removed",
+      "source_files": ["customer_repository.py"],
+      "functions": ["get_customer_profile", "create_customer"],
+      "references": [
+        {"source_file": "customer_repository.py", "function_name": "get_customer_profile"},
+        {"source_file": "customer_repository.py", "function_name": "create_customer"}
+      ]
+    },
+    {
+      "database_object": "customers.email",
+      "change_type": "column_modified",
+      "source_files": ["customer_repository.py", "report_queries.sql"],
+      "functions": ["get_customer_profile", "create_customer"],
+      "references": [
+        {"source_file": "customer_repository.py", "function_name": "get_customer_profile"},
+        {"source_file": "customer_repository.py", "function_name": "create_customer"},
+        {"source_file": "report_queries.sql", "function_name": null}
+      ]
+    },
+    {
+      "database_object": "orders.order_total",
+      "change_type": "column_renamed",
+      "source_files": ["order_repository.py", "report_queries.sql"],
+      "functions": ["list_customer_orders"],
+      "references": [
+        {"source_file": "order_repository.py", "function_name": "list_customer_orders"},
+        {"source_file": "report_queries.sql", "function_name": null}
+      ]
+    },
+    {
+      "database_object": "orders.status",
+      "change_type": "column_modified",
+      "source_files": ["order_repository.py", "report_queries.sql"],
+      "functions": ["list_customer_orders", "mark_order_complete"],
+      "references": [
+        {"source_file": "order_repository.py", "function_name": "list_customer_orders"},
+        {"source_file": "order_repository.py", "function_name": "mark_order_complete"},
+        {"source_file": "report_queries.sql", "function_name": null}
+      ]
+    },
+    {
+      "database_object": "products",
+      "change_type": "table_removed",
+      "source_files": ["product_repository.py", "report_queries.sql"],
+      "functions": ["list_available_products"],
+      "references": [
+        {"source_file": "product_repository.py", "function_name": "list_available_products"},
+        {"source_file": "report_queries.sql", "function_name": null}
+      ]
+    }
+  ]
+}
